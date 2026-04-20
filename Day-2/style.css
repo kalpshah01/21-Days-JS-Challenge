@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition:background 0.3s,color 0.3s;
+}
+
+.light {
+  background: #ffffff;
+  color: #111;
+}
+
+.dark {
+  background: #111;
+  color: #ffffff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #444;
+  color: white;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.card {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
