@@ -1,0 +1,131 @@
+    :root {
+        --accent: #AAFFC7;
+        --bg: #f3fcf5;
+        --surface: #ffffff;
+        --text: #1f3f2f;
+        --muted: #5a6c64;
+        --border: #d8e7dc;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: linear-gradient(180deg, #f8fff6 0%, #eaf8ec 100%);
+        color: var(--text);
+        min-height: 100vh;
+        padding: 24px;
+    }
+
+    h1 {
+
+        font-size: clamp(2rem, 3vw, 3rem);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        max-width: 720px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+
+    form {
+        background: var(--surface);
+        padding: 24px;
+        border-radius: 18px;
+        box-shadow: 0 20px 40px rgba(50, 70, 60, 0.08);
+        border: 1px solid var(--border);
+        display: grid;
+        gap: 16px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 16px;
+        font-size: 1rem;
+        color: var(--text);
+        background: #f9fdf8;
+        resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgba(170, 255, 199, 0.18);
+    }
+
+    button {
+        border: none;
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        background: var(--accent);
+        color: #18331e;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        align-self: start;
+    }
+
+    button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 30px rgba(170, 255, 199, 0.28);
+    }
+
+    .show {
+        margin: 32px auto 0;
+        width: 100%;
+        max-width: 840px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+    th,
+    td {
+        padding: 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+    }
+
+    th {
+        background: #f1fbf2;
+        color: var(--text);
+        font-weight: 600;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    td button {
+        /* background: transparent; */
+        border: 1px solid #b7dcc5;
+        border-radius: 10px;
+        color: red;
+        padding: 10px 14px;
+    }
+
+    td button:hover {
+        background: rgba(170, 255, 199, 0.22);
+    }
+
+    .show h2 {
+        margin: 0 0 22px;
+        color: var(--muted);
+    }
