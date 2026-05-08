@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a class="brand" href="#" aria-label="Netflix clone home">NETFLIX</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-panel" id="navPanel">
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#series">Series</a>
+        <a href="#movies">Movies</a>
+        <a href="#webseries">Webseries</a>
+        <a href="#shortfilms">Short Films</a>
+        <a href="#newarrival">New Arrival</a>
+      </div>
+
+      <div class="nav-actions">
+        <label class="search-box" aria-label="Search titles">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Search movies, series">
+        </label>
+        <select id="typeFilter" aria-label="Filter category">
+          <option value="all">All</option>
+          <option value="series">Series</option>
+          <option value="movie">Movie</option>
+          <option value="webseries">Webseries</option>
+          <option value="short">Short Film</option>
+          <option value="new">New Arrival</option>
+        </select>
+        <button class="profile" aria-label="Profile">
+          <span>K</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="hero" id="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="hero-kicker" id="heroKicker">Netflix Original</p>
+        <h1 id="heroTitle">Midnight Protocol</h1>
+        <p class="hero-meta" id="heroMeta">2026 | 4 Seasons | Sci-Fi Thriller</p>
+        <p class="hero-text" id="heroText">A secret team races through neon cities to stop a global signal that can rewrite memory.</p>
+        <div class="hero-buttons">
+          <button class="primary-btn" id="playHero">Play</button>
+          <button class="secondary-btn" id="seasonHero">Season 1</button>
+        </div>
+      </div>
+
+      <div class="hero-controls">
+        <button id="prevHero" aria-label="Previous slide">‹</button>
+        <div class="hero-dots" id="heroDots" aria-label="Slider dots"></div>
+        <button id="nextHero" aria-label="Next slide">›</button>
+      </div>
+    </section>
+
+    <section class="results" id="resultsSection" hidden>
+      <div class="section-heading">
+        <h2>Search Results</h2>
+        <p id="resultCount">0 titles</p>
+      </div>
+      <div class="grid-results" id="resultsGrid"></div>
+    </section>
+
+    <section class="content-section" id="series" data-row="series">
+      <div class="section-heading">
+        <h2>Series</h2>
+        <p>Binge-worthy seasons</p>
+      </div>
+      <div class="rail-wrap">
+        <button class="rail-btn left" data-slide="series" data-dir="-1" aria-label="Scroll series left">‹</button>
+        <div class="content-rail" id="seriesRail"></div>
+        <button class="rail-btn right" data-slide="series" data-dir="1" aria-label="Scroll series right">›</button>
+      </div>
+    </section>
+
+    <section class="content-section" id="movies" data-row="movie">
+      <div class="section-heading">
+        <h2>Movies</h2>
+        <p>Big stories for tonight</p>
+      </div>
+      <div class="rail-wrap">
+        <button class="rail-btn left" data-slide="movie" data-dir="-1" aria-label="Scroll movies left">‹</button>
+        <div class="content-rail" id="movieRail"></div>
+        <button class="rail-btn right" data-slide="movie" data-dir="1" aria-label="Scroll movies right">›</button>
+      </div>
+    </section>
+
+    <section class="content-section" id="webseries" data-row="webseries">
+      <div class="section-heading">
+        <h2>Webseries</h2>
+        <p>Fast, addictive episodes</p>
+      </div>
+      <div class="rail-wrap">
+        <button class="rail-btn left" data-slide="webseries" data-dir="-1" aria-label="Scroll webseries left">‹</button>
+        <div class="content-rail" id="webseriesRail"></div>
+        <button class="rail-btn right" data-slide="webseries" data-dir="1" aria-label="Scroll webseries right">›</button>
+      </div>
+    </section>
+
+    <section class="content-section" id="shortfilms" data-row="short">
+      <div class="section-heading">
+        <h2>Short Films</h2>
+        <p>Sharp stories under 40 minutes</p>
+      </div>
+      <div class="rail-wrap">
+        <button class="rail-btn left" data-slide="short" data-dir="-1" aria-label="Scroll short films left">‹</button>
+        <div class="content-rail" id="shortRail"></div>
+        <button class="rail-btn right" data-slide="short" data-dir="1" aria-label="Scroll short films right">›</button>
+      </div>
+    </section>
+
+    <section class="content-section" id="newarrival" data-row="new">
+      <div class="section-heading">
+        <h2>New Arrival</h2>
+        <p>Fresh this week</p>
+      </div>
+      <div class="rail-wrap">
+        <button class="rail-btn left" data-slide="new" data-dir="-1" aria-label="Scroll new arrivals left">‹</button>
+        <div class="content-rail" id="newRail"></div>
+        <button class="rail-btn right" data-slide="new" data-dir="1" aria-label="Scroll new arrivals right">›</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h2>NETFLIX</h2>
+      <p>A responsive HTML, CSS, and JavaScript streaming UI clone for practice.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Audio Description</a>
+      <a href="#">Help Center</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Media Center</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+   <p style="text-align: center; margin-bottom: 15px;">&copy 2025-2026 ~All rights Reserved Kalp shah</p>
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>
