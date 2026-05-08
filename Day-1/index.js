@@ -16,6 +16,7 @@ function time() {
         s = s < 10 ? "0" + s : s; // if s is less than 10 then add 0 before s ex.09 otherwise return s ex.10
         let time1 = h + ":" + m + ":" + s + " " + peroid;
         document.querySelector("#clock").innerText = time1;
+      
       }
       setInterval(() => {
         time();

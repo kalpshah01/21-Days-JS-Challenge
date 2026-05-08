@@ -1,0 +1,252 @@
+
+body {
+  background-image: url("./e2.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+label,
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  color: snow;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: lightblue;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+table {
+  text-align: center;
+  border: 2px solid black;
+  color: gold;
+  background-color: rgb(10, 84, 153);
+  font-size: 18px;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table th {
+  background-color: rgb(0, 60, 120);
+}
+
+table tr:hover {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+table button {
+    background: none;
+    border: none;
+    color: gold;
+    cursor: pointer;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+table button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+table button i {
+    margin-right: 5px;
+}
+
+input {
+  background-color: lightyellow;
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:hover {
+  background-color: lightskyblue;
+}
+
+#btn {
+  background-color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#btn:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background-color: green;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+}
+
+.cancel-btn {
+  background-color: red;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid wheat;
+    object-fit: cover;
+}
+
+
+.desktop-nav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.desktop-nav a,
+.mobile-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+
+#btn {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#btn:hover {
+    color: lightgray;
+}
+
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100%;
+    background: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-nav.active {
+    left: 0;
+}
+
+#insert{
+    background-color: green;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#closeBtn { 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#closeBtn:hover {
+    color: lightgray;
+}
+
+
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    #btn {
+        display: block;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 5px;
+    }
+}
+    
