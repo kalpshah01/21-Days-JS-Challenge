@@ -6,7 +6,7 @@ let body = document.body;
 let img = document.getElementById("img1");
 let title = document.getElementById("title");
 let text = document.getElementById("text");
-
+ 
 let theme = localStorage.getItem("theme") || "light";
 
 function applyTheme(theme) {
