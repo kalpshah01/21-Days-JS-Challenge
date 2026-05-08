@@ -13,7 +13,7 @@ function time() {
         }
         h = h < 10 ? "0" + h : h; // if h is less than 10 then add 0 before h ex.09 otherwise return h ex.10
         m = m < 10 ? "0" + m : m; // if m is less than 10 then add 0 before m ex.09 otherwise return m ex.10
-        s = s < 10 ? "0" + s : s; // if s is less than 10 then add 0 before s ex.09 otherwise return s ex.10
+        s = s < 10 ? "0" + s : s; // if s is less than 10 then add 0 before s ex.09 otherwise return s ex.10 
         let time1 = h + ":" + m + ":" + s + " " + peroid;
         document.querySelector("#clock").innerText = time1;
       
