@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 let btn = document.getElementById("btn");
 let mobilenav = document.getElementById("mobilenav");
@@ -127,3 +128,134 @@ let add = document
     document.getElementById("evenue").value = "";
     document.getElementById("edate").value = "";
   });
+=======
+
+let btn = document.getElementById("btn");
+let mobilenav = document.getElementById("mobilenav");
+let closeBtn = document.getElementById("closeBtn");
+ 
+btn.addEventListener("click", () => {
+  mobilenav.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  mobilenav.classList.remove("active");
+});
+
+
+
+let eventlist = JSON.parse(localStorage.getItem("eventlist")) || [];
+
+let ebody = document.getElementById("eventbody");
+
+function displayEvent() {
+  ebody.innerHTML = "";
+  eventlist.forEach((event, idx) => {
+    ebody.innerHTML += `<tr>
+                <td>${idx + 1}</td>
+                <td>${event.name}</td>
+                <td>${event.venue}</td>
+                <td>${event.date}</td>
+                <td>
+                  <button onclick="deleteEvent(${idx})"> <i class="fa-solid fa-trash-can"></i> </button> <br /><br>
+               
+                </td>
+              </tr>`;
+  });
+}
+
+function deleteEvent(idx) {
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "confirm-btn",
+      cancelButton: "cancel-btn",
+    },
+    buttonsStyling: false,
+  });
+  swalWithBootstrapButtons
+    .fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, cancel!",
+      reverseButtons: true,
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        swalWithBootstrapButtons.fire({
+          title: "Deleted!",
+          text: "Your Record has been deleted.",
+          icon: "success",
+        });
+        eventlist.splice(idx, 1);
+        localStorage.setItem("eventlist", JSON.stringify(eventlist));
+        displayEvent();
+      } else if (
+        
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire({
+          title: "Cancelled",
+          text: "Your Record  is safe :)",
+          icon: "error",
+        });
+      }
+    });
+}
+displayEvent();
+
+let add = document
+  .getElementById("insert")
+  .addEventListener("click", function (e) {
+    let ename = document.getElementById("ename").value.trim();
+    let evenue = document.getElementById("evenue").value.trim();
+    let edate = document.getElementById("edate").value;
+    e.preventDefault();
+    if (ename === "") {
+      Swal.fire({
+        icon: "error",
+        title: "name Required",
+        text: "Please enter your name",
+      });
+      return;
+    }
+    if (evenue === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Venue Required",
+        text: "Please enter your Venue",
+      });
+      return;
+    }
+    if (edate === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Date Required",
+        text: "Please enter your Date",
+      });
+      return;
+    } else {
+      
+        eventlist.push({
+          id: Date.now(),
+          name: ename,
+          venue: evenue,
+          date: edate,
+        });
+        localStorage.setItem("eventlist", JSON.stringify(eventlist));
+      
+    }
+    Swal.fire({
+      title: "Submited Successfully!",
+      icon: "success",
+      draggable: true,
+    });
+    displayEvent();
+    console.log(ename, evenue, edate);
+    document.getElementById("ename").value = "";
+    document.getElementById("evenue").value = "";
+    document.getElementById("edate").value = "";
+  });
+>>>>>>> b3ca907bc6bf439a5cacd77213626e025cd2bc84

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,3 +37,43 @@
     <script src="index.js"></script>
   </body>
 </html>
+=======
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Notes App!</h1>
+      <form id="noteForm">
+        <input type="text" id="noteTitle" placeholder="Note Title" required />
+        <textarea
+          id="noteContent"
+          placeholder="Note Content"
+          required
+        ></textarea>
+        <button type="submit" id="btn">Add Note</button>
+      </form>
+    </div>
+    <div class="show">
+      <h2>Your Notes:</h2>
+      <table id="notesTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+>>>>>>> b3ca907bc6bf439a5cacd77213626e025cd2bc84

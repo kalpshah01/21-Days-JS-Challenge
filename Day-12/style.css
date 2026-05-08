@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -73,3 +74,80 @@
       font-size: 14px;
     }
   }
+=======
+
+  body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background: black;
+    margin: 0;
+    padding: 20px;
+  }
+  .box { 
+    background: #ffffff;  
+    padding: 30px; 
+    border-radius: 15px; 
+    width: 100%; 
+    max-width: 350px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #f39c12;
+  }
+  h2 { 
+    text-align: center; 
+    color: #f39c12; 
+    margin-bottom: 20px;
+  }
+  #length, #result { 
+    width: 100%; 
+    margin: 10px 0; 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  label { 
+    display: block; 
+    margin: 10px 0; 
+    color: #333;
+  }
+  button { 
+    width: 100%; 
+    margin: 20px 0; 
+    padding: 12px; 
+    background: #f39c12; 
+    color: #000; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background 0.3s;
+    box-sizing: border-box;
+  }
+  button:hover { 
+    background: #e67e22; 
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+    .box {
+      padding: 20px;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+    #length, #result, button {
+      font-size: 14px;
+      padding: 10px;
+    }
+    label {
+      font-size: 14px;
+    }
+  }
+>>>>>>> b3ca907bc6bf439a5cacd77213626e025cd2bc84

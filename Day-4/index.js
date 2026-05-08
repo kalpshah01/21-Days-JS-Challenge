@@ -5,6 +5,7 @@
             "img/slider3.png",
             "img/slider4.png",
         ];
+
         let index=0;
         let img=document.getElementById("img");
         let prev=document.getElementById("prev");
